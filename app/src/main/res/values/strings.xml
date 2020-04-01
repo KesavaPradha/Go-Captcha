@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Go-Captcha</string>
+    <string name="hello">hello</string>
+    <string name="fingerprint">fingerprint</string>
+    <string name="vibration">Count the vibration</string>
+    <string name="shake">Shake the phone</string>
+</resources>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/background"
+    android:layout_height="match_parent"
+    android:contentDescription="Captcha image is present at the center. Captcha alternatives are available in the right to the image"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/login_txt"
+        android:layout_width="340dp"
+        android:layout_margin="10dp"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:fontFamily="cursive"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"/>
+
+    <com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_txt"
+        android:paddingTop="50dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/corner"
+        android:background="@color/white"
+        android:padding="20dp"
+        app:corner_radius="16dp">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/lin2"
+            android:gravity="center_horizontal"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+
+
+
+            <EditText
+                android:id="@+id/user_id_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="User ID"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/colorPrimary"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                />
+
+
+            <EditText
+                android:id="@+id/password_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColorHint="@color/colorPrimary"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"/>
+
+
+
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/lin2"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/captcha_img"
+            android:layout_width="200dp"
+            android:src="@drawable/captcha"
+            android:contentDescription="Captcha image"
+            android:layout_height="70dp"/>
+
+        <EditText
+            android:id="@+id/captcha_edt"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            />
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_below="@+id/lin1"
+            android:id="@+id/lin3"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/ok_btn"
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:background="@drawable/rounded"
+                android:textColor="@color/white"
+                android:text="SIGN IN"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin1"
+        android:layout_width="60dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/lin"
+        android:orientation="vertical"
+        android:layout_below="@+id/lin2"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/fingerprint_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:contentDescription="@string/fingerprint"
+            android:src="@drawable/ic_fingerprint_black_24dp" />
+
+
+        <ImageButton
+            android:id="@+id/vibrate_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/white"
+            android:contentDescription="@string/vibration"
+            android:src="@drawable/ic_vibration_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/shake_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/white"
+            android:contentDescription="@string/shake"
+            android:src="@drawable/ic_screen_rotation_black_24dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="330dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/tap_img"
+            android:layout_width="280dp"
+            android:onClick="count"
+            android:contentDescription="Tap the image equal vibration count"
+            android:src="@drawable/round"
+            android:layout_height="220dp" />
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:id="@+id/submit_btn"
+            android:background="@drawable/rounded"
+            android:textColor="@color/white"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:text="SUBMIT" />
+
+    </LinearLayout>
+
+    </com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout>
+
+
+        <Button
+            android:layout_below="@+id/corner"
+            android:id="@+id/register_btn"
+            android:background="@drawable/rounded_button"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="45dp"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:text="SIGN UP"
+            />
+
+
+
+
+</RelativeLayout>
